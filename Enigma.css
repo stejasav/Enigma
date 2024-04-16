@@ -1,0 +1,181 @@
+.banner{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    margin-top: 7px; 
+    margin-left: 0px;
+}
+
+h1,h2,h3{
+    text-align: center;
+    font-size: 47px;
+    font-family: 'Inter', sans-serif;
+    color: rgb(239, 10, 59);
+    /* color: rgb(231, 5, 99); */
+}
+
+body{
+    background-color: rgb(8, 8, 8);
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin: 2px;
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#navbar{
+    height: 55px;
+}
+
+.navbar{
+    height:50px;
+    margin: 7px;
+    margin-bottom: 7px ;
+}
+
+.about{
+    display: flex;
+}
+
+.desc{
+    width: 70%;
+    padding: 0px 8px;
+}
+
+.team{
+    width:30%;
+}
+
+.team-image{
+    border-radius: 5px;
+    width: 100%;
+    padding-top: 0px;
+    margin-top: 0px;
+    /* border: 1px solid gray; */
+}
+
+.jobs{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+#application-form{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+#application-form label{
+    font-weight: 600;
+}
+
+.form-group{
+    margin: 20px 0px;
+}
+
+.form-group textarea{
+    width: 70%;
+    background-color: rgb(239, 236, 236);
+    height: 170px;
+    font-family: 'Roboto';
+}
+
+.form-group input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+}
+
+.form-group input[type="submit"]{
+    background-color: red;
+    /* background-color: rgb(201, 197, 197); */
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+
+}
+
+
+#application-form input,select,textarea{
+    padding:8px;
+    /* padding-right: 50px; */
+    margin-top: 10px;
+    font-size: 1.25rem;
+    border: 1px solid gray;
+    border-radius: 6px;
+}
+
+.apply{
+    float: right;
+    color: #faf5f5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.apply:hover{
+    color: rgb(236, 15, 15);
+    text-decoration: underline;
+}
+
+h3{
+    margin-bottom: 2px;
+    margin-top: 1px;
+}
+
+.footer{
+    background-color: rgba(20, 20, 20, 0.526);
+    padding: 5px;
+    margin-top: 45px;
+    text-align: center;
+}
+
+.footer-links{
+    list-style: none;
+}
+
+#contact{
+    cursor: pointer;
+}
+
+.footer-links li{
+    display: inline;
+    margin: 0 20px;
+}
+
+.copyright{
+    color: gray;
+    font-size: 1rem;
+}
+
+.jobs-table{
+    width: 100%;
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.jobs-header th{
+    border: 1px solid gray;
+    padding: 8px;
+    background-color: rgba(240, 248, 255, 0.15) ;
+    text-align: center;
+}
+
+.jobs-data td{
+    border: 1px solid gray;
+    padding: 15px;
+}
+
+.jobs-table tr:nth-child(odd){
+    background-color: rgba(119, 118, 118, 0.353);
+}
+
+.jobs-table tr:nth-child(even){
+    background-color: rgba(51, 50, 50, 0.571);
+}
+
+table td:nth-child(1){
+    width: 500px;
+}
+table td:nth-child(4) {
+  width: 400px; 
+}
