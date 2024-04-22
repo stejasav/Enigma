@@ -1,9 +1,16 @@
-.banner{
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    margin-top: 7px; 
-    margin-left: 0px;
+/* Base style (Extra small device(mobile) ) */
+html{
+    font-size: 16px;
+}
+
+body{
+    background-color: rgb(8, 8, 8);
+    color: rgb(255, 255, 255);
+    margin: 0;
+    /* margin-left: 10px; */
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
 }
 
 h1,h2,h3{
@@ -11,57 +18,108 @@ h1,h2,h3{
     font-size: 47px;
     font-family: 'Inter', sans-serif;
     color: rgb(239, 10, 59);
-    /* color: rgb(231, 5, 99); */
 }
 
-body{
-    background-color: rgb(8, 8, 8);
-    color: rgb(255, 255, 255);
-    font-size: 25px;
-    margin: 2px;
-    margin-left: 10px;
-    font-family: 'Roboto', sans-serif;
+h1, h2{
+    margin: 8px 0;
+    text-align: center;
+}
+
+.apply{
+    float: right;
+    color: #faf5f5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.apply:hover, .apply:focus{
+    color: rgb(236, 15, 15);
+    text-decoration: underline;
 }
 
 #navbar{
-    height: 55px;
+    height: 60px;
 }
 
 .navbar{
-    height:50px;
     margin: 7px;
     margin-bottom: 7px ;
 }
 
+.logo{
+    display: block;
+}
+
+.logo-text{
+    display: none;
+}
+
+.banner{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
 .about{
     display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 8px;
 }
 
 .desc{
-    width: 70%;
-    padding: 0px 8px;
-}
-
-.team{
-    width:30%;
+    font-size: 1.25rem;
+    padding: 8px;
 }
 
 .team-image{
     border-radius: 5px;
     width: 100%;
     padding-top: 0px;
+    padding-bottom: 0px;
     margin-top: 0px;
-    /* border: 1px solid gray; */
+    margin-bottom: 0px;
+}
+
+h2{
+    margin: 20px;
 }
 
 .jobs{
-    max-width: 1200px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 0 8px;
 }
 
+.jobs-list{
+    display: block;
+}
+
+.jobs-table{
+    display: none;
+}
+
+.job{
+    border: 1px solid #dddddd;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.job-title{
+    font-size: 1.25rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.job-detail{
+    margin-top: 4px;
+    color: #dddddd;
+}
+
 #application-form{
-    max-width: 1200px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 0 8px;
 }
@@ -88,33 +146,23 @@ body{
 
 .form-group input[type="submit"]{
     background-color: red;
-    /* background-color: rgb(201, 197, 197); */
     cursor: pointer;
     font-weight: 500;
     color: white;
 
 }
 
-
-#application-form input,select,textarea{
+.form-group input,select,textarea{
+    width: 90%;
     padding:8px;
-    /* padding-right: 50px; */
     margin-top: 10px;
     font-size: 1.25rem;
     border: 1px solid gray;
     border-radius: 6px;
 }
 
-.apply{
-    float: right;
-    color: #faf5f5;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.apply:hover{
-    color: rgb(236, 15, 15);
-    text-decoration: underline;
+#application-form textarea{
+    width: 90%;
 }
 
 h3{
@@ -131,6 +179,7 @@ h3{
 
 .footer-links{
     list-style: none;
+    padding-left: 0;
 }
 
 #contact{
@@ -138,8 +187,8 @@ h3{
 }
 
 .footer-links li{
-    display: inline;
-    margin: 0 20px;
+    /* display: inline; */
+    margin: 7px 20px;
 }
 
 .copyright{
@@ -147,35 +196,119 @@ h3{
     font-size: 1rem;
 }
 
-.jobs-table{
-    width: 100%;
-    border: 1px solid gray;
-    border-collapse: collapse;
+/* For small devices (tablet) */
+@media screen and (min-width: 576px) {
+    html{
+        font-size: 19px;
+    }
+    .logo{
+        display: none;
+    }
+    .logo-text{
+        display: block;
+    }
+    .banner{
+        height: 400px;
+    }
+    h1{
+        margin: 15px 0;
+    }
+    .about{
+        max-width: 700px;
+    }
+    .jobs{
+        max-width: 700px;
+    }
+    .form-group{
+        width: auto;
+    }
+    .form-group textarea{
+        width: 90%;
+    }
+    .footer-links li{
+        display: inline;
+    }
 }
 
-.jobs-header th{
-    border: 1px solid gray;
-    padding: 8px;
-    background-color: rgba(240, 248, 255, 0.15) ;
-    text-align: center;
+/* For medium devices (laptop) */
+@media screen and (min-width: 900px) {
+    .banner{
+        height: 690px;
+    }
+    h1{
+        margin: 20px 0;
+    }
+    .about{
+        max-width: 1250px;
+        flex-direction: row;
+    }
+    .desc{
+        width: 65%;
+        padding-right: 8px;
+    }
+    .team{
+        width: 49%;
+    }
+    .jobs{
+        max-width: 1250px;
+    }
+    .jobs-list{
+        display: none;
+    }
+    .jobs-table{
+        display: table;
+        width: 100%;
+        border: 1px solid gray;
+        border-collapse: collapse;
+    }
+    .jobs-header th{
+        border: 1px solid gray;
+        padding: 8px;
+        background-color: rgba(240, 248, 255, 0.15) ;
+        text-align: center;
+    }
+    .jobs-data td{
+        border: 1px solid gray;
+        padding: 15px;
+    }
+    
+    .jobs-table tr:nth-child(odd){
+        background-color: rgba(119, 118, 118, 0.353);
+    }
+    
+    .jobs-table tr:nth-child(even){
+        background-color: rgba(51, 50, 50, 0.571);
+    }
+    
+    table td:nth-child(1){
+        width: 500px;
+    }
+    table td:nth-child(4) {
+      width: 400px; 
+    }
+    #application-form{
+        max-width: 1250px;
+    }
+    .form-group input,select{
+        width: 45%;
+    }
+    .form-group{
+        width: 55%;
+    }
+    
+}
+/* For large devices (desktop)*/
+@media screen and (min-width: 992px) {
+    
 }
 
-.jobs-data td{
-    border: 1px solid gray;
-    padding: 15px;
+/* For extra large devices (large desktop) */
+@media screen and (min-width: 1200px) {
+    
 }
 
-.jobs-table tr:nth-child(odd){
-    background-color: rgba(119, 118, 118, 0.353);
-}
+/* 
 
-.jobs-table tr:nth-child(even){
-    background-color: rgba(51, 50, 50, 0.571);
-}
 
-table td:nth-child(1){
-    width: 500px;
-}
-table td:nth-child(4) {
-  width: 400px; 
-}
+
+*/
